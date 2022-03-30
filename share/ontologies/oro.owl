@@ -28,7 +28,8 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://kb.openrobots.org">
-        <dc:date>2008-2011</dc:date>
+        <dc:date>2022-03-30</dc:date>
+        <dc:creator>PAL Robotics</dc:creator>
         <dc:creator>CNRS-LAAS</dc:creator>
         <dc:rights>Creative Commons 3.0 by</dc:rights>
         <dc:title xml:lang="en">OpenRobots Ontology - Common Sense</dc:title>
