@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>oro</name>
+  <version>1.0.0</version>
+  <description>The OpenRobots ontology</description>
+
+  <maintainer email="severin.lemaignan@pal-robotics.com">Séverin Lemaignan</maintainer>
+
+  <license>Creative Commons 3.0 BY</license>
+  <url type="website">http://kb.openrobots.org</url> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <export>
+  </export>
+</package>
