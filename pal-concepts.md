@@ -10,7 +10,7 @@ This file lists the main concepts used when programming our robots, and their ma
 - POI (point of interest): `Point`
 - ZOI (zone of interest): `ZoneOfInterest`
 
-### Properties (`predicates`)
+### Properties (or `predicates`)
 
 - current location of someone/something: `isAt`
   - `myself isAt ?loc` returns the current zone(s) the robot is in
@@ -44,3 +44,28 @@ This file lists the main concepts used when programming our robots, and their ma
 
 
 ## Actions & behaviours
+
+### Classes
+
+- action: `Action`
+  - several sub-classes of `Action` are available, like `Navigation`, `Manipulation`, `Interaction` (themselves split into more sub-classes) or `Idling`
+  
+
+### Properties
+
+- action (voluntarily) performed by a robot or a human: `currentlyPerforms`
+  - `myself currentlyPerforms ?action` returns the list of actions currently performed by the robot
+- actions are parametrised by their [*thematic roles*](https://en.wikipedia.org/wiki/Thematic_relation). The main ones are:
+  - `actsOnObject`
+  - `hasGoal`
+  - `performedBy`
+  - `receivedBy`
+
+For instance:
+  - `?person currentlyPerforms ?action, ?action receivedBy myself` returns the person who is 'doing' something *to* me. For instance, handing over something to me.
+  - `?action rdf:type Give, ?action receivedBy myself, ?action actsOnObject ?obj` returns in `?obj` the object that someone is giving to me.
+  - `?action rdf:type Give, ?action receivedBy myself, ?action actsOnObject ?obj, ?action performedBy john` returns in `?obj` the object that *John* is giving to me.
+
+## Robot status
+
+### Properties
