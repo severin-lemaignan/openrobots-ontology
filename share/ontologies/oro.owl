@@ -333,6 +333,7 @@ currentlyBodilyDo is another specialization of currentlyDo, for non intentional 
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#hasCharacteristicLocation">
         <rdfs:range rdf:resource="http://kb.openrobots.org#Location"/>
+        <rdfs:comment xml:lang="en">the typical, expected &apos;default&apos; location of something</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -346,6 +347,16 @@ currentlyBodilyDo is another specialization of currentlyDo, for non intentional 
         <rdfs:range rdf:resource="http://kb.openrobots.org#Color"/>
         <question xml:lang="en">What is the color?</question>
         <rdfs:comment>describe the main, significant color of the object.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.openrobots.org#hasEngagementLevel -->
+
+    <owl:ObjectProperty rdf:about="http://kb.openrobots.org#hasEngagementLevel">
+        <rdfs:domain rdf:resource="http://kb.openrobots.org#EngagementSituation"/>
+        <rdfs:range rdf:resource="http://kb.openrobots.org#EngagementLevel"/>
+        <rdfs:comment xml:lang="en">the current &apos;level&apos; of engagement of an EngagementSituation</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -592,6 +603,30 @@ Values can be:
     
 
 
+    <!-- http://kb.openrobots.org#isSharedSituation -->
+
+    <owl:ObjectProperty rdf:about="http://kb.openrobots.org#isSharedSituation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://sw.opencyc.org/concept/Situation"/>
+        <rdfs:range rdf:resource="http://sw.opencyc.org/concept/Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.openrobots.org#jointEngagementWith -->
+
+    <owl:ObjectProperty rdf:about="http://kb.openrobots.org#jointEngagementWith">
+        <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#isSharedSituation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://kb.openrobots.org#EngagementSituation"/>
+        <rdfs:range rdf:resource="http://kb.openrobots.org#EngagementSituation"/>
+        <rdfs:comment xml:lang="en">describes that two situations experiences by two agents are in fact mutual engagement (ie, the two situations are EngagementSituations, and the two agents are engaged together).
+
+?a experiences ?s1, ?b experiences ?s2, ?s1 jointEngagementWith ?s2 implies that ?s1 and ?s2 are engagement situations experienced by ?a and ?b, and ?a and ?b are in fact engaged together.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://kb.openrobots.org#leftOf -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#leftOf">
@@ -599,15 +634,6 @@ Values can be:
         <owl:inverseOf rdf:resource="http://kb.openrobots.org#rightOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label>is left of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://kb.openrobots.org#levelOfEngagement -->
-
-    <owl:ObjectProperty rdf:about="http://kb.openrobots.org#levelOfEngagement">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#EngagementSituation"/>
-        <rdfs:range rdf:resource="http://kb.openrobots.org#EngagementLevel"/>
     </owl:ObjectProperty>
     
 
@@ -1416,6 +1442,11 @@ This means that the object may not be currently in the field of view of the agen
 
     <owl:Class rdf:about="http://kb.openrobots.org#EngagementSituation">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/StaticSituation"/>
+        <rdfs:comment xml:lang="en">Situation where two or more agents are engaging into joint activity(ies). These activities can by concrete (playing a game together, participating into a phone call,...) or more abstract (eg joint attention).
+
+Importantly, while EngagementSituation is inherently a shared experience between agent, each agent experiences its own, idenpendent, EngagementSituation. As such, only one Agent should experience a given instance of EngagementSituation.
+
+The joint engagement between two (or more) agents is then expressed via the predicate jointEngagementWith, that operates between instances of EngagementSituation.</rdfs:comment>
         <rdfs:label xml:lang="en">engagement</rdfs:label>
     </owl:Class>
     
@@ -2657,7 +2688,13 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <!-- http://kb.openrobots.org#disengaged -->
 
-    <owl:NamedIndividual rdf:about="http://kb.openrobots.org#disengaged">
+    <owl:NamedIndividual rdf:about="http://kb.openrobots.org#disengaged"/>
+    
+
+
+    <!-- http://kb.openrobots.org#disengaging -->
+
+    <owl:NamedIndividual rdf:about="http://kb.openrobots.org#disengaging">
         <rdf:type rdf:resource="http://kb.openrobots.org#EngagementLevel"/>
     </owl:NamedIndividual>
     
@@ -2666,6 +2703,14 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <!-- http://kb.openrobots.org#engaged -->
 
     <owl:NamedIndividual rdf:about="http://kb.openrobots.org#engaged">
+        <rdf:type rdf:resource="http://kb.openrobots.org#EngagementLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://kb.openrobots.org#engaging -->
+
+    <owl:NamedIndividual rdf:about="http://kb.openrobots.org#engaging">
         <rdf:type rdf:resource="http://kb.openrobots.org#EngagementLevel"/>
     </owl:NamedIndividual>
     
