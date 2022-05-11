@@ -1089,6 +1089,7 @@ This means that the object may not be currently in the field of view of the agen
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.openrobots.org#Avatar"/>
                     <rdf:Description rdf:about="http://kb.openrobots.org#Human"/>
                     <rdf:Description rdf:about="http://kb.openrobots.org#Robot"/>
                 </owl:unionOf>
@@ -1097,7 +1098,7 @@ This means that the object may not be currently in the field of view of the agen
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
         <owl:disjointWith rdf:resource="http://kb.openrobots.org#BodyPart"/>
         <openCycUri>http://sw.opencyc.org/concept/Mx4rvViAB5wpEbGdrcN5Y29ycA</openCycUri>
-        <rdfs:comment>Groups both humans and robots</rdfs:comment>
+        <rdfs:comment xml:lang="en">Groups embodied agents (humans and robots) and disembodied ones (avatars)</rdfs:comment>
         <rdfs:label xml:lang="en">agent</rdfs:label>
         <rdfs:label xml:lang="fr">agent</rdfs:label>
     </owl:Class>
@@ -1142,6 +1143,17 @@ This means that the object may not be currently in the field of view of the agen
         </rdfs:subClassOf>
         <rdfs:label>audio tape</rdfs:label>
         <rdfs:label>audiotape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.openrobots.org#Avatar -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#Avatar">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:comment xml:lang="en">A disembodied agent, typically represented on a screen as a virtual agent</rdfs:comment>
+        <rdfs:label xml:lang="en">avatar</rdfs:label>
+        <rdfs:label xml:lang="fr">avatar</rdfs:label>
     </owl:Class>
     
 
@@ -1370,6 +1382,14 @@ This means that the object may not be currently in the field of view of the agen
     <!-- http://kb.openrobots.org#EmbodiedAgent -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#EmbodiedAgent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.openrobots.org#Human"/>
+                    <rdf:Description rdf:about="http://kb.openrobots.org#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Agent"/>
         <rdfs:label xml:lang="fr">agent incarné</rdfs:label>
         <rdfs:label xml:lang="en">embodied agent</rdfs:label>
