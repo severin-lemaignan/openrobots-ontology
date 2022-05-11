@@ -998,6 +998,19 @@ See the temporalProperty holds-Underspecified for a relationship between a holde
     
 
 
+    <!-- http://kb.openrobots.org#isPerceived -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#isPerceived">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://sw.opencyc.org/concept/EnduringThing-Localized"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates if an enduring thing-localized is currently perceived by the agent (myself).
+
+The &apos;thing&apos; might be perceived by any sense/exteroception system available to the agent, including (but not limited to) sight/vision, touch, sound.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://kb.openrobots.org#isReachable -->
 
     <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#isReachable">
