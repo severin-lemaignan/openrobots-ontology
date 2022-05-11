@@ -773,7 +773,7 @@ For instance, in the sentence &quot;The robot gives the cup to the human&quot;, 
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#taskOfPlan">
         <rdfs:domain rdf:resource="http://kb.openrobots.org#Task"/>
-        <rdfs:range rdf:resource="http://sw.opencyc.org/concept/Plan-ExpectedSituationType"/>
+        <rdfs:range rdf:resource="http://kb.openrobots.org#TaskPlan"/>
         <rdfs:label>is a task of plan</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1601,7 +1601,6 @@ This means that the object may not be currently in the field of view of the agen
     <!-- http://kb.openrobots.org#Location -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Location">
-        <owl:equivalentClass rdf:resource="http://sw.opencyc.org/concept/SpatialThing-Localized"/>
         <rdfs:comment>Location is use in its very broad meaning of &quot;a spatial-localized thing&quot;. Hence an object is a location, an agent is a location, etc.</rdfs:comment>
     </owl:Class>
     
@@ -1712,14 +1711,6 @@ This means that the object may not be currently in the field of view of the agen
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://kb.openrobots.org#Plan -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Plan">
-        <owl:equivalentClass rdf:resource="http://sw.opencyc.org/concept/Plan-ExpectedSituationType"/>
     </owl:Class>
     
 
@@ -1856,10 +1847,19 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
     
 
 
+    <!-- http://kb.openrobots.org#SpaceChunk -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#SpaceChunk">
+        <owl:equivalentClass rdf:resource="http://kb.openrobots.org#Zone"/>
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceRegion"/>
+        <rdfs:comment xml:lang="en">A three-dimensional space region that can be occupied by solid objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://kb.openrobots.org#SpaceRegion -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#SpaceRegion">
-        <owl:equivalentClass rdf:resource="http://kb.openrobots.org#Zone"/>
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SpatialThing-Localized"/>
         <openCycUri>http://sw.opencyc.org/concept/Mx4rvlxdi5wpEbGdrcN5Y29ycA</openCycUri>
         <rdfs:comment>A specialization of both SpatialThing and IntangibleIndividual (qq.v.) whose instances are regions of space that exclusively act as possible locations for other spatial objects, and thus are immobile. A space region might be three-, two-, one-, or zero-dimensional; and spatial objects &quot;occupy&quot; such regions accordingly. Three-dimensional space regions (see SpaceChunk) can be occupied by solid objects. Two-dimensional space regions (or Surfaces) can be occupied by a purely two-dimensional objects. And similarly for one-dimensional space regions (Lines) and zero-dimensional space regions (Points).
@@ -1926,6 +1926,17 @@ For more on spatial location and occupancy, see AbsoluteLocationalPredicate and 
         <rdfs:comment>An action considered in the specific context of robotics.</rdfs:comment>
         <rdfs:label xml:lang="en">task</rdfs:label>
         <rdfs:label xml:lang="fr">tâche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.openrobots.org#TaskPlan -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#TaskPlan">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Plan-ExpectedSituationType"/>
+        <rdfs:comment xml:lang="en">Sequence of actions</rdfs:comment>
+        <rdfs:label xml:lang="en">plan</rdfs:label>
+        <rdfs:label xml:lang="fr">plan</rdfs:label>
     </owl:Class>
     
 
@@ -2082,14 +2093,16 @@ For more on spatial location and occupancy, see AbsoluteLocationalPredicate and 
 
     <!-- http://kb.openrobots.org#Zone -->
 
-    <owl:Class rdf:about="http://kb.openrobots.org#Zone"/>
+    <owl:Class rdf:about="http://kb.openrobots.org#Zone">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceRegion"/>
+    </owl:Class>
     
 
 
     <!-- http://kb.openrobots.org#ZoneOfAction -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#ZoneOfAction">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceRegion"/>
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceChunk"/>
         <rdfs:comment>Defines the portion of space in which an agent can act. It primary relates to actions like taking something.</rdfs:comment>
     </owl:Class>
     
@@ -2098,7 +2111,7 @@ For more on spatial location and occupancy, see AbsoluteLocationalPredicate and 
     <!-- http://kb.openrobots.org#ZoneOfInteraction -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#ZoneOfInteraction">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceRegion"/>
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceChunk"/>
     </owl:Class>
     
 
@@ -2106,7 +2119,7 @@ For more on spatial location and occupancy, see AbsoluteLocationalPredicate and 
     <!-- http://kb.openrobots.org#ZoneOfInterest -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#ZoneOfInterest">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceRegion"/>
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceChunk"/>
         <rdfs:comment>A specific region of space which has an interest for some purpose.
 For instance, a table can have several zone of interests describing parts of the table interessant for the robot (plates, zons in front of chairs,etc.)</rdfs:comment>
         <rdfs:label xml:lang="fr">zone d&apos;intérêt</rdfs:label>
@@ -2398,8 +2411,6 @@ The object of an action is asserted through the properties objectOfAction and re
 
     <owl:Class rdf:about="http://sw.opencyc.org/concept/Plan-ExpectedSituationType">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/TemporalThing"/>
-        <rdfs:label xml:lang="en">plan</rdfs:label>
-        <rdfs:label xml:lang="fr">plan</rdfs:label>
         <rdfs:label xml:lang="en">thing with a temporal extend</rdfs:label>
     </owl:Class>
     
@@ -2420,6 +2431,7 @@ The object of an action is asserted through the properties objectOfAction and re
     <!-- http://sw.opencyc.org/concept/Resting-Relaxing -->
 
     <owl:Class rdf:about="http://sw.opencyc.org/concept/Resting-Relaxing">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Action"/>
         <rdfs:comment>The collection of events in which an animal abstains from strenuous physical activity.</rdfs:comment>
         <rdfs:label xml:lang="fr">repos</rdfs:label>
         <rdfs:label xml:lang="en">rest</rdfs:label>
