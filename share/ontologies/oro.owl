@@ -354,6 +354,7 @@ currentlyBodilyDo is another specialization of currentlyDo, for non intentional 
     <!-- http://kb.openrobots.org#hasEngagementLevel -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#hasEngagementLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://kb.openrobots.org#EngagementSituation"/>
         <rdfs:range rdf:resource="http://kb.openrobots.org#EngagementLevel"/>
         <rdfs:comment xml:lang="en">the current &apos;level&apos; of engagement of an EngagementSituation</rdfs:comment>
