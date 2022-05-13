@@ -1585,6 +1585,24 @@ The joint engagement between two (or more) agents is then expressed via the pred
     
 
 
+    <!-- http://kb.openrobots.org#Idling -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#Idling">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Resting-Relaxing"/>
+        <rdfs:comment xml:lang="en">A type of Resting-Relaxing action where the agent is &apos;doing nothing&apos;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.openrobots.org#Interaction -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#Interaction">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Action"/>
+        <rdfs:comment xml:lang="en">An action that involves some sort of interaction between two (or more) agents.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://kb.openrobots.org#Jacket -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Jacket">
@@ -1642,8 +1660,18 @@ The joint engagement between two (or more) agents is then expressed via the pred
 
     <owl:Class rdf:about="http://kb.openrobots.org#Manipulation">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Action"/>
+        <owl:disjointWith rdf:resource="http://kb.openrobots.org#Navigation"/>
         <rdfs:label xml:lang="en">manipulation</rdfs:label>
         <rdfs:label xml:lang="fr">manipulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.openrobots.org#Navigation -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#Navigation">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Action"/>
+        <rdfs:comment xml:lang="en">A navigation action is an action where the robot moves from one location to the other, usually relying on a pre-computed navigation plan, and adjusting en route to unexpected obstacles.</rdfs:comment>
     </owl:Class>
     
 
