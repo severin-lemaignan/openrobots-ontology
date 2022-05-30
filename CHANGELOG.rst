@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2022-05-30)
+------------------
 * add a couple more types of actions
 * hasEngagementLevel is a functional property
 * Update pal-concepts.md

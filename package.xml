@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>oro</name>
-  <version>1.0.0</version>
+  <version>0.1.0</version>
   <description>The OpenRobots ontology</description>
 
   <maintainer email="severin.lemaignan@pal-robotics.com">Séverin Lemaignan</maintainer>
