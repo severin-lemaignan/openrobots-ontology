@@ -968,6 +968,18 @@ Example: &gt;John&lt; killed Harry.</rdfs:comment>
     
 
 
+    <!-- http://kb.openrobots.org#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#hasName">
+        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name of the agent. If the agent is known by several name, more than one triple &lt;agent hasName name&gt;.
+
+The preferred name for an agent can be access through the (functional) preferredName predicate.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://kb.openrobots.org#isDesired -->
 
     <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#isDesired">
@@ -1079,6 +1091,18 @@ Thus an object can not be said to be generally reachable or not.</rdfs:comment>
         <rdfs:comment>Indicates if an enduring thing-localized is visible (modulo a head movement) for the agent (myself).
 
 This means that the object may not be currently in the field of view of the agent, but only requires the agent to turn the head to see it.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://kb.openrobots.org#preferredName -->
+
+    <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#preferredName">
+        <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#hasName"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Preferred name of an agent. If the agent has other names, the can be access via hasName.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
