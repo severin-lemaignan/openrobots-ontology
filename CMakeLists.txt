@@ -11,12 +11,21 @@ find_package(ament_cmake REQUIRED)
 # >>> import ament_index_python as aip
 # >>> aip.get_resources("ontologies")
 
-file(GLOB ontologies "share/ontologies/*")
+install(DIRECTORY share/ontologies DESTINATION share/ )
 
+# generate and register with ament_index a file with the list of installed
+# ontologies
+set(list_ontologies "${CMAKE_BINARY_DIR}/list_ontologies")
+file(REMOVE list_ontologies)
+
+file(GLOB ontologies "share/ontologies/*")
 foreach(ontology ${ontologies})
     get_filename_component(name ${ontology} NAME)
-    ament_index_register_resource("ontologies" CONTENT_FILE ${ontology} PACKAGE_NAME ${name})
+    # message(STATUS "Registering ${name}...")
+    file(APPEND list_ontologies "share/ontologies/${name}\n")
 endforeach()
+
+ament_index_register_resource("ontologies" CONTENT_FILE list_ontologies)
 
 ament_package()
 
