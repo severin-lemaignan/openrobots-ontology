@@ -2,6 +2,13 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* port to ROS2 packaging, using ament_index
+* reinstate date/creator tags overwritten by 9bde4cc45c5
+* add hasName and preferredName
+* Contributors: Luka Juricic, Séverin Lemaignan
+
 0.1.0 (2022-05-30)
 ------------------
 * add a couple more types of actions
