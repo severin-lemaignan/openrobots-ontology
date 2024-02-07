@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.0 (2024-02-07)
+------------------
 * port to ROS2 packaging, using ament_index
 * reinstate date/creator tags overwritten by 9bde4cc45c5
 * add hasName and preferredName
