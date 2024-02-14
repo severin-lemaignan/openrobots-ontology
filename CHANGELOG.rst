@@ -2,6 +2,11 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* simplify generation of ament_index marker + correct path in marker file
+* Contributors: Séverin Lemaignan
+
 2.0.0 (2024-02-07)
 ------------------
 * port to ROS2 packaging, using ament_index
