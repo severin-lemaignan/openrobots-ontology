@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2024-02-14)
+------------------
 * simplify generation of ament_index marker + correct path in marker file
 * Contributors: Séverin Lemaignan
 
