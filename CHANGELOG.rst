@@ -2,6 +2,11 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* various updates, incl. automatic clean up coming from more recent version of Protege
+* Contributors: Séverin Lemaignan
+
 2.0.1 (2024-02-14)
 ------------------
 * simplify generation of ament_index marker + correct path in marker file
