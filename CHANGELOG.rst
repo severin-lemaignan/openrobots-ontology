@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.0 (2024-04-02)
+------------------
 * various updates, incl. automatic clean up coming from more recent version of Protege
 * Contributors: Séverin Lemaignan
 
