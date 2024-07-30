@@ -2,6 +2,16 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* [doc] finish doc in CMakeLists
+* changed ament index resource name
+  there is a mismatch between the ament index resource name
+  as defined per this package ("ontologies") and the one
+  that KnowledgeCore looks for ("ontology"). This is just a quick
+  fix, waiting for discussing which name we want to use.
+* Contributors: Séverin Lemaignan, lorenzoferrini
+
 2.1.0 (2024-04-02)
 ------------------
 * various updates, incl. automatic clean up coming from more recent version of Protege
