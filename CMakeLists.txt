@@ -16,7 +16,7 @@ install(DIRECTORY share/ontologies DESTINATION share/${PROJECT_NAME} )
 file(GLOB_RECURSE ontologies RELATIVE ${CMAKE_SOURCE_DIR}/share "share/ontologies/*")
 list(JOIN ontologies "\n" list_ontologies)
 
-ament_index_register_resource("ontologies" CONTENT "${list_ontologies}")
+ament_index_register_resource("ontology" CONTENT "${list_ontologies}")
 
 ament_package()
 
