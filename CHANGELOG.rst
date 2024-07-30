@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.0 (2024-07-30)
+------------------
 * [doc] finish doc in CMakeLists
 * changed ament index resource name
   there is a mismatch between the ament index resource name
