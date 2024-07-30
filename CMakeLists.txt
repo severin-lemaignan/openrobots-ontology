@@ -9,7 +9,16 @@ find_package(ament_cmake REQUIRED)
 # Available ontologies can then be retrieved at runtime with e.g.
 #
 # >>> import ament_index_python as aip
-# >>> aip.get_resources("ontologies")
+# >>> aip.get_resources("ontology")
+# {'oro': '<path>'}
+# >>> oro = aip.get_resource("ontology", "oro")
+# >>> oro
+# ('ontologies/oro.owl\nontologies/oro2.owl', '<path>')
+#
+# >>> oro_list, path = oro
+# >>> for ontology in oro_list.split("\n"):
+# ...     print(os.path.join(path, ontology))
+
 
 install(DIRECTORY share/ontologies DESTINATION share/${PROJECT_NAME} )
 
