@@ -2343,6 +2343,7 @@ The object of an action is asserted through the properties objectOfAction and re
 
     <owl:Class rdf:about="http://sw.opencyc.org/concept/Food">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FoodOrDrink"/>
+        <rdfs:label xml:lang="en">food</rdfs:label>
     </owl:Class>
     
 
@@ -2647,6 +2648,34 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <rdfs:label xml:lang="fr">chose</rdfs:label>
         <rdfs:label xml:lang="en">thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Apple -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Apple">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Food"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Fruit"/>
+        <rdfs:label xml:lang="en">apple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Fruit -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Fruit">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Pear -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Pear">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Food"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Fruit"/>
+        <rdfs:label xml:lang="en">pear</rdfs:label>
     </owl:Class>
     
 
