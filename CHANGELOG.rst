@@ -2,6 +2,13 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add dbr:Apple and dbr:Pear as type of food and fruit
+* add concepts related to region of space and field of view
+* add dbr and dbo prefixes for dbpedia
+* Contributors: Séverin Lemaignan
+
 2.2.0 (2024-07-30)
 ------------------
 * [doc] finish doc in CMakeLists
