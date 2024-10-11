@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.1 (2024-10-11)
+------------------
 * add dbr:Apple and dbr:Pear as type of food and fruit
 * add concepts related to region of space and field of view
 * add dbr and dbo prefixes for dbpedia
