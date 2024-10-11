@@ -167,8 +167,9 @@ Example: &gt;Mary&lt; fell over.</rdfs:comment>
     <!-- http://kb.openrobots.org#belongsTo -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#belongsTo">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:domain rdf:resource="http://sw.opencyc.org/concept/SpatialThing-Localized"/>
         <rdfs:range rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:comment>links a localized spatial thing (be it physical, like an object, or not, like for instance a field of view) to the agent owning or controlling it.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartient à</rdfs:label>
         <rdfs:label xml:lang="en">belongs to</rdfs:label>
     </owl:ObjectProperty>
@@ -1451,6 +1452,15 @@ The joint engagement between two (or more) agents is then expressed via the pred
     
 
 
+    <!-- http://kb.openrobots.org#FieldOfView -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#FieldOfView">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#SpaceChunk"/>
+        <rdfs:comment>the field of view of an agent</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://kb.openrobots.org#Floor -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Floor">
@@ -1811,6 +1821,15 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Manipulation"/>
         <rdfs:label xml:lang="fr">poser</rdfs:label>
         <rdfs:label xml:lang="en">put</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://kb.openrobots.org#RegionOfSpace -->
+
+    <owl:Class rdf:about="http://kb.openrobots.org#RegionOfSpace">
+        <owl:equivalentClass rdf:resource="http://sw.opencyc.org/concept/SpaceRegion"/>
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SpatialThing-Localized"/>
     </owl:Class>
     
 
