@@ -2,6 +2,18 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* move/add more concepts from DBpedia
+  Includes:
+   - dbr:Shelf_(storage)
+   - dbr:Coffee_table
+   - dbr:Table_(furniture)
+   - dbr:Cup
+   - dbr:Book
+
+* Contributors: Séverin Lemaignan
+
 2.2.1 (2024-10-11)
 ------------------
 * add dbr:Apple and dbr:Pear as type of food and fruit
