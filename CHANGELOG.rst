@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.4.0 (2024-12-03)
+------------------
 * replace oro:Agent by foaf:Agent, add foaf concepts like person, add PROV concepts like Person, Agent, Activity
 * add foaf properties color and name, aligned with oro concepts
 * add foaf, prov and dbpedia properties prefixes
