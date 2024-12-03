@@ -179,7 +179,7 @@ Example: &gt;Mary&lt; fell over.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#belongsTo">
         <rdfs:domain rdf:resource="http://sw.opencyc.org/concept/SpatialThing-Localized"/>
-        <rdfs:range rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment>links a localized spatial thing (be it physical, like an object, or not, like for instance a field of view) to the agent owning or controlling it.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartient à</rdfs:label>
         <rdfs:label xml:lang="en">belongs to</rdfs:label>
@@ -209,7 +209,7 @@ Example: &gt;Mary&lt; fell over.</rdfs:comment>
     <!-- http://kb.openrobots.org#canPerform -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#canPerform">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/PurposefulAction"/>
     </owl:ObjectProperty>
     
@@ -218,7 +218,7 @@ Example: &gt;Mary&lt; fell over.</rdfs:comment>
     <!-- http://kb.openrobots.org#canUndertakeNow -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#canUndertakeNow">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/PurposefulAction"/>
         <rdfs:comment>Links an agent to an action it can starts now. When required, this relationship is to be computed by a planner (or inferred from a model of the human).</rdfs:comment>
         <rdfs:label>can undertake now</rdfs:label>
@@ -267,7 +267,7 @@ Example: &gt;Mary&lt; fell over.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#currentlyPerforms">
         <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#currentlyDoes"/>
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/Action"/>
         <rdfs:comment>(currentlyPerforms AGENT ACTION) means that the AGENT is currently performing the intentional ACTION.</rdfs:comment>
         <rdfs:label>currently performs</rdfs:label>
@@ -281,7 +281,7 @@ currentlyBodilyDo is another specialization of currentlyDo, for non intentional 
     <!-- http://kb.openrobots.org#desires -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#desires">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/Situation"/>
         <rdfs:label xml:lang="en">desire</rdfs:label>
         <rdfs:label xml:lang="en">desires</rdfs:label>
@@ -314,7 +314,7 @@ currentlyBodilyDo is another specialization of currentlyDo, for non intentional 
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#experiences">
         <owl:inverseOf rdf:resource="http://kb.openrobots.org#isExperienced"/>
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/StaticSituation"/>
         <rdfs:comment xml:lang="en">describes a agent that currently *is* in a specific (static) situation</rdfs:comment>
         <rdfs:label xml:lang="en">experiences</rdfs:label>
@@ -327,7 +327,7 @@ currentlyBodilyDo is another specialization of currentlyDo, for non intentional 
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#focusesOn">
         <owl:inverseOf rdf:resource="http://kb.openrobots.org#isFocusOf"/>
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/EnduringThing-Localized"/>
         <rdfs:comment xml:lang="en">An agent is said to focus on an object if and only if it looksAt it AND pointsAt it.</rdfs:comment>
         <rdfs:label>focuses on</rdfs:label>
@@ -338,7 +338,7 @@ currentlyBodilyDo is another specialization of currentlyDo, for non intentional 
     <!-- http://kb.openrobots.org#hasBodyPart -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#hasBodyPart">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://kb.openrobots.org#BodyPart"/>
     </owl:ObjectProperty>
     
@@ -399,7 +399,7 @@ Example: John went &gt;home&lt;</rdfs:comment>
     <!-- http://kb.openrobots.org#hasInHand -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#hasInHand">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://kb.openrobots.org#GraspableObject"/>
     </owl:ObjectProperty>
     
@@ -427,7 +427,7 @@ Example: John went &gt;home&lt;</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#hasPosture">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://kb.openrobots.org#Posture"/>
     </owl:ObjectProperty>
     
@@ -507,7 +507,7 @@ Example: John went &gt;home&lt;</rdfs:comment>
     <!-- http://kb.openrobots.org#isAbleTo -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#isAbleTo">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/PurposefulAction"/>
         <rdfs:comment>(isAbleTo AGENT ACTION) says that AGENT it technically/physically able to achieve the ACTION. It does not mean that the agent can do it right now (see canUndertakeNow for this meaning). The ACTION is constrainted to purposeful actions: isAbleTo does not intend to express a fact like &quot;a stone is able to sink into the water&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">am able to</rdfs:label>
@@ -657,7 +657,7 @@ Values can be:
     <!-- http://kb.openrobots.org#looksAt -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#looksAt">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/EnduringThing-Localized"/>
         <rdfs:comment xml:lang="en">Describes the status of an agent actively looking at an object (&apos;sees&apos; doesn&apos;t imply the agent is actively looking at the object, but only that the object is in the field of view of the agent).</rdfs:comment>
         <rdfs:label xml:lang="en">looks at</rdfs:label>
@@ -700,7 +700,7 @@ In the sentence &quot;Jido shows the Eiffel tower to the tourist&quot;, the obje
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#pointsAt">
         <owl:equivalentProperty rdf:resource="http://sw.opencyc.org/concept/pointingToward"/>
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/EnduringThing-Localized"/>
         <rdfs:comment xml:lang="en">Describes the status of an agent physically pointing at a physical location with a hand.</rdfs:comment>
         <rdfs:label>points at</rdfs:label>
@@ -770,7 +770,7 @@ For instance, in the sentence &quot;The robot gives the cup to the human&quot;, 
     <!-- http://kb.openrobots.org#sees -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#sees">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/EnduringThing-Localized"/>
         <rdfs:label xml:lang="en">see</rdfs:label>
         <rdfs:label xml:lang="en">sees</rdfs:label>
@@ -805,7 +805,7 @@ For instance, in the sentence &quot;The robot gives the cup to the human&quot;, 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#staticSituationInvolves">
         <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#involves"/>
         <rdfs:domain rdf:resource="http://sw.opencyc.org/concept/StaticSituation"/>
-        <rdfs:range rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment>Binds a static situation (a state of the world) to the agents involved in the situation.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -917,7 +917,7 @@ For instance, in the sentence &quot;The robot gives the cup to the human&quot;, 
         <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#hasThematicRoleRelationWith"/>
         <rdfs:subPropertyOf rdf:resource="http://sw.opencyc.org/concept/doneBy"/>
         <rdfs:domain rdf:resource="http://sw.opencyc.org/concept/PurposefulAction"/>
-        <rdfs:range rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment>Instigator of some action.
 
 Example: &gt;John&lt; killed Harry.</rdfs:comment>
@@ -936,6 +936,17 @@ Example: &gt;John&lt; killed Harry.</rdfs:comment>
     <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/knows -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/knows">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Note that, while foaf defines &apos;knowns&apos; only between persons, we extend it to agents.</rdfs:comment>
+        <rdfs:seeAlso>http://xmlns.com/foaf/spec/#term_knows</rdfs:seeAlso>
+    </owl:ObjectProperty>
     
 
 
@@ -995,7 +1006,7 @@ Example: &gt;John&lt; killed Harry.</rdfs:comment>
     <!-- http://kb.openrobots.org#hasName -->
 
     <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#hasName">
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The name of the agent. If the agent is known by several name, more than one triple &lt;agent hasName name&gt;.
 
@@ -1090,7 +1101,7 @@ Thus an object can not be said to be generally reachable or not.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#isSitting">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -1124,7 +1135,7 @@ This means that the object may not be currently in the field of view of the agen
     <owl:DatatypeProperty rdf:about="http://kb.openrobots.org#preferredName">
         <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#hasName"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Preferred name of an agent. If the agent has other names, the can be access via hasName.</rdfs:comment>
     </owl:DatatypeProperty>
@@ -1134,6 +1145,12 @@ This means that the object may not be currently in the field of view of the agen
     <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
     
 
 
@@ -1170,21 +1187,8 @@ This means that the object may not be currently in the field of view of the agen
     <!-- http://kb.openrobots.org#Agent -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Agent">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://kb.openrobots.org#Avatar"/>
-                    <rdf:Description rdf:about="http://kb.openrobots.org#Human"/>
-                    <rdf:Description rdf:about="http://kb.openrobots.org#Robot"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
-        <owl:disjointWith rdf:resource="http://kb.openrobots.org#BodyPart"/>
-        <openCycUri>http://sw.opencyc.org/concept/Mx4rvViAB5wpEbGdrcN5Y29ycA</openCycUri>
-        <rdfs:comment xml:lang="en">Groups embodied agents (humans and robots) and disembodied ones (avatars)</rdfs:comment>
-        <rdfs:label xml:lang="en">agent</rdfs:label>
-        <rdfs:label xml:lang="fr">agent</rdfs:label>
     </owl:Class>
     
 
@@ -1206,7 +1210,7 @@ This means that the object may not be currently in the field of view of the agen
     <!-- http://kb.openrobots.org#Avatar -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Avatar">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment xml:lang="en">A disembodied agent, typically represented on a screen as a virtual agent</rdfs:comment>
         <rdfs:label xml:lang="en">avatar</rdfs:label>
         <rdfs:label xml:lang="fr">avatar</rdfs:label>
@@ -1218,6 +1222,7 @@ This means that the object may not be currently in the field of view of the agen
 
     <owl:Class rdf:about="http://kb.openrobots.org#BodyPart">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/PartiallyTangible"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="en">body part</rdfs:label>
         <rdfs:label xml:lang="fr">partie du corps</rdfs:label>
     </owl:Class>
@@ -1357,7 +1362,7 @@ This means that the object may not be currently in the field of view of the agen
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="fr">agent incarné</rdfs:label>
         <rdfs:label xml:lang="en">embodied agent</rdfs:label>
     </owl:Class>
@@ -1515,6 +1520,7 @@ The joint engagement between two (or more) agents is then expressed via the pred
     <!-- http://kb.openrobots.org#Human -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Human">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#EmbodiedAgent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1583,7 +1589,7 @@ The joint engagement between two (or more) agents is then expressed via the pred
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://kb.openrobots.org#isFocusOf"/>
                                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="http://kb.openrobots.org#Agent"/>
+                                <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
                     </owl:Restriction>
@@ -2606,6 +2612,62 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#ContinuousTimeInterval"/>
+        <rdfs:comment>An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <rdfs:comment>https://www.w3.org/TR/prov-o/#Agent</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Person -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#EmbodiedAgent"/>
+        <rdfs:comment>https://www.w3.org/TR/prov-o/#Person</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.openrobots.org#Avatar"/>
+                    <rdf:Description rdf:about="http://kb.openrobots.org#Human"/>
+                    <rdf:Description rdf:about="http://kb.openrobots.org#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <openCycUri>http://sw.opencyc.org/concept/Mx4rvViAB5wpEbGdrcN5Y29ycA</openCycUri>
+        <rdfs:comment xml:lang="en">Groups embodied agents (humans and robots) and disembodied ones (avatars)</rdfs:comment>
+        <rdfs:label xml:lang="en">agent</rdfs:label>
+        <rdfs:label xml:lang="fr">agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#EmbodiedAgent"/>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Apple -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Apple">
@@ -2894,7 +2956,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <!-- http://kb.openrobots.org#myself -->
 
     <owl:NamedIndividual rdf:about="http://kb.openrobots.org#myself">
-        <rdf:type rdf:resource="http://kb.openrobots.org#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment xml:lang="en">&quot;Myself&quot; is always the cognitive agent who owns the current instance of the ontology.</rdfs:comment>
         <rdfs:label xml:lang="fr">moi-même</rdfs:label>
         <rdfs:label xml:lang="en">myself</rdfs:label>
@@ -3028,18 +3090,18 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://kb.openrobots.org#Agent"/>
             <rdf:Description rdf:about="http://kb.openrobots.org#Artifact"/>
-            <rdf:Description rdf:about="http://kb.openrobots.org#VisualMark"/>
+            <rdf:Description rdf:about="http://kb.openrobots.org#Ceilling"/>
+            <rdf:Description rdf:about="http://kb.openrobots.org#Floor"/>
+            <rdf:Description rdf:about="http://kb.openrobots.org#Wall"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://kb.openrobots.org#Artifact"/>
-            <rdf:Description rdf:about="http://kb.openrobots.org#Ceilling"/>
-            <rdf:Description rdf:about="http://kb.openrobots.org#Floor"/>
-            <rdf:Description rdf:about="http://kb.openrobots.org#Wall"/>
+            <rdf:Description rdf:about="http://kb.openrobots.org#VisualMark"/>
+            <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
