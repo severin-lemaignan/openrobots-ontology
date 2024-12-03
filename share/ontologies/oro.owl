@@ -1128,6 +1128,15 @@ This means that the object may not be currently in the field of view of the agen
     
 
 
+    <!-- http://dbpedia.org/ontology/Plant -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Plant">
+        <owl:equivalentClass rdf:resource="http://sw.opencyc.org/concept/Plant"/>
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/PartiallyTangible"/>
+    </owl:Class>
+    
+
+
     <!-- http://kb.openrobots.org#ActiveConcept -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#ActiveConcept">
@@ -1191,58 +1200,6 @@ This means that the object may not be currently in the field of view of the agen
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/PartiallyTangible"/>
         <rdfs:label xml:lang="en">body part</rdfs:label>
         <rdfs:label xml:lang="fr">partie du corps</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kb.openrobots.org#Book -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Book">
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://kb.openrobots.org#Artifact"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
-                        <owl:someValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                                <owl:withRestrictions rdf:parseType="Collection">
-                                    <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minInclusive>
-                                    </rdf:Description>
-                                    <rdf:Description>
-                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</xsd:maxInclusive>
-                                    </rdf:Description>
-                                </owl:withRestrictions>
-                            </rdfs:Datatype>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicWeight"/>
-                        <owl:someValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                                <owl:withRestrictions rdf:parseType="Collection">
-                                    <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</xsd:minInclusive>
-                                    </rdf:Description>
-                                    <rdf:Description>
-                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</xsd:maxInclusive>
-                                    </rdf:Description>
-                                </owl:withRestrictions>
-                            </rdfs:Datatype>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://kb.openrobots.org#isMovable"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <openCycUri>http://sw.opencyc.org/concept/Mx4rwJaXepwpEbGdrcN5Y29ycA</openCycUri>
     </owl:Class>
     
 
@@ -1356,32 +1313,6 @@ This means that the object may not be currently in the field of view of the agen
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Manipulation"/>
         <rdfs:label xml:lang="fr">couvrir</rdfs:label>
         <rdfs:label xml:lang="en">cover</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kb.openrobots.org#Cup -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Cup">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Tableware"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1900,6 +1831,7 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
     <!-- http://kb.openrobots.org#Shelf -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Shelf">
+        <owl:equivalentClass rdf:resource="https://dbpedia.org/resource/Shelf_(storage)"/>
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
         <openCycUri>http://sw.opencyc.org/concept/Mx4rvVjY_5wpEbGdrcN5Y29ycA</openCycUri>
         <rdfs:label xml:lang="en">shelf</rdfs:label>
@@ -2502,6 +2434,7 @@ The object of an action is asserted through the properties objectOfAction and re
     <!-- http://sw.opencyc.org/concept/Sofa-PieceOfFurniture -->
 
     <owl:Class rdf:about="http://sw.opencyc.org/concept/Sofa-PieceOfFurniture">
+        <owl:equivalentClass rdf:resource="https://dbpedia.org/resource/Couch"/>
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
         <rdfs:label xml:lang="fr">canapé</rdfs:label>
         <rdfs:label xml:lang="en">couch</rdfs:label>
@@ -2588,6 +2521,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <!-- http://sw.opencyc.org/concept/Table-PieceOfFurniture -->
 
     <owl:Class rdf:about="http://sw.opencyc.org/concept/Table-PieceOfFurniture">
+        <owl:equivalentClass rdf:resource="https://dbpedia.org/resource/Table_(furniture)"/>
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2662,10 +2596,112 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Book -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Book">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://kb.openrobots.org#Artifact"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicWeight"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://kb.openrobots.org#isMovable"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <openCycUri>http://sw.opencyc.org/concept/Mx4rwJaXepwpEbGdrcN5Y29ycA</openCycUri>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Coffee_table -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Coffee_table">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Table_(furniture)"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Couch -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Couch">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Cup -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Cup">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Tableware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Fruit -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Fruit">
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Plant"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Ornamental_plant -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Ornamental_plant">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Plant"/>
     </owl:Class>
     
 
@@ -2676,6 +2712,30 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Food"/>
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Fruit"/>
         <rdfs:label xml:lang="en">pear</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Smartphone -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Smartphone">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/CellularTelephone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Shelf_(storage) -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Shelf_(storage)">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Table_(furniture) -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Table_(furniture)">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
     </owl:Class>
     
 
@@ -2966,8 +3026,8 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://kb.openrobots.org#Bottle"/>
-            <rdf:Description rdf:about="http://kb.openrobots.org#Cup"/>
             <rdf:Description rdf:about="http://kb.openrobots.org#Glass"/>
+            <rdf:Description rdf:about="https://dbpedia.org/resource/Cup"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
