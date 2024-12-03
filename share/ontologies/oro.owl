@@ -105,6 +105,14 @@ It covers the &quot;common sense&quot; knowledge and rules, independantly of rob
     
 
 
+    <!-- http://dbpedia.org/property/color -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/property/color">
+        <owl:equivalentProperty rdf:resource="http://kb.openrobots.org#hasColor"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://kb.openrobots.org#actionInvolves -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#actionInvolves">
@@ -939,6 +947,15 @@ Example: &gt;John&lt; killed Harry.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dbpedia.org/property/name -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/property/name">
+        <owl:equivalentProperty rdf:resource="http://kb.openrobots.org#hasName"/>
+        <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    </owl:DatatypeProperty>
     
 
 
