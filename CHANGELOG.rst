@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.0 (2024-12-03)
+------------------
 * move/add more concepts from DBpedia
   Includes:
    - dbr:Shelf_(storage)
