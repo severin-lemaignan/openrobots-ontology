@@ -2,6 +2,11 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* remove prov: concepts to avoid clutter + semantic alignment was not ideal
+* Contributors: Séverin Lemaignan
+
 2.4.0 (2024-12-03)
 ------------------
 * replace oro:Agent by foaf:Agent, add foaf concepts like person, add PROV concepts like Person, Agent, Activity
