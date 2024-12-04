@@ -2612,33 +2612,6 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
-    <!-- http://www.w3.org/ns/prov#Activity -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#ContinuousTimeInterval"/>
-        <rdfs:comment>An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Agent -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
-        <rdfs:comment>https://www.w3.org/TR/prov-o/#Agent</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Person -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#EmbodiedAgent"/>
-        <rdfs:comment>https://www.w3.org/TR/prov-o/#Person</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
