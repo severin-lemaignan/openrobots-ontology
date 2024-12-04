@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.5.0 (2024-12-04)
+------------------
 * remove prov: concepts to avoid clutter + semantic alignment was not ideal
 * Contributors: Séverin Lemaignan
 
