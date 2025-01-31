@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.6.0 (2025-01-31)
+------------------
 * Added a number of COCO/gazebo classes
   Gazebo classes correspond to the objects appearing in the 'small_house'
   Gazebo environment.
