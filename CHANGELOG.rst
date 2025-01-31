@@ -2,6 +2,14 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added a number of COCO/gazebo classes
+  Gazebo classes correspond to the objects appearing in the 'small_house'
+  Gazebo environment.
+* wip on adding coco + gazebo small_house generic object classes
+* Contributors: Séverin Lemaignan
+
 2.5.0 (2024-12-04)
 ------------------
 * remove prov: concepts to avoid clutter + semantic alignment was not ideal
