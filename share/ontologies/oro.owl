@@ -1174,6 +1174,28 @@ This means that the object may not be currently in the field of view of the agen
     
 
 
+    <!-- http://dbpedia.org/resource/Chair -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Chair">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+        <openCycUri>http://sw.opencyc.org/concept/Chair-PieceOfFurniture</openCycUri>
+        <rdfs:label xml:lang="en">chair</rdfs:label>
+        <rdfs:label xml:lang="fr">chaise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/resource/Armchair_(furniture) -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Armchair_(furniture)">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+        <openCycUri>http://sw.opencyc.org/concept/ArmChair</openCycUri>
+        <rdfs:label xml:lang="en">armchair</rdfs:label>
+        <rdfs:label xml:lang="fr">fauteuil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://kb.openrobots.org#ActiveConcept -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#ActiveConcept">
@@ -2003,6 +2025,7 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
     <!-- http://kb.openrobots.org#Trashbin -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Trashbin">
+        <owl:equivalentClass rdf:resource="https://dbpedia.org/resource/Waste_container"/>
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
         <openCycUri>http://sw.opencyc.org/concept/Mx4rvVjUTpwpEbGdrcN5Y29ycA</openCycUri>
@@ -2041,22 +2064,6 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
         <openCycUri>http://sw.opencyc.org/concept/Mx4rvVjfapwpEbGdrcN5Y29ycA</openCycUri>
         <rdfs:label xml:lang="fr">mur</rdfs:label>
         <rdfs:label xml:lang="en">wall</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kb.openrobots.org#Window -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Window">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#isTraversable"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <openCycUri>http://sw.opencyc.org/concept/Mx4rvVj5V5wpEbGdrcN5Y29ycA</openCycUri>
     </owl:Class>
     
 
@@ -2143,16 +2150,6 @@ The object of an action is asserted through the properties objectOfAction and re
     
 
 
-    <!-- http://sw.opencyc.org/concept/ArmChair -->
-
-    <owl:Class rdf:about="http://sw.opencyc.org/concept/ArmChair">
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
-        <rdfs:label xml:lang="en">armchair</rdfs:label>
-        <rdfs:label xml:lang="fr">fauteuil</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://sw.opencyc.org/concept/Beer -->
 
     <owl:Class rdf:about="http://sw.opencyc.org/concept/Beer">
@@ -2208,16 +2205,6 @@ The object of an action is asserted through the properties objectOfAction and re
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
         <rdfs:label xml:lang="en">mobile phone</rdfs:label>
         <rdfs:label xml:lang="fr">téléphone mobile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://sw.opencyc.org/concept/Chair-PieceOfFurniture -->
-
-    <owl:Class rdf:about="http://sw.opencyc.org/concept/Chair-PieceOfFurniture">
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
-        <rdfs:label xml:lang="en">chair</rdfs:label>
-        <rdfs:label xml:lang="fr">chaise</rdfs:label>
     </owl:Class>
     
 
@@ -2651,6 +2638,18 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Bed -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Bed">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+        <rdfs:label xml:lang="de">Bett</rdfs:label>
+        <rdfs:label xml:lang="en">bed</rdfs:label>
+        <rdfs:label xml:lang="es">cama</rdfs:label>
+        <rdfs:label xml:lang="fr">lit</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Book -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Book">
@@ -2745,6 +2744,20 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Door -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Door">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#isTraversable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Fruit -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Fruit">
@@ -2771,10 +2784,44 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Picture_frame -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Picture_frame">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Smartphone -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Smartphone">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/CellularTelephone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Waste_container -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Waste_container">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:label xml:lang="fr">poubelle</rdfs:label>
+        <rdfs:label xml:lang="en-gb">rubbish bin</rdfs:label>
+        <rdfs:label xml:lang="en-us">trash</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Window -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Window">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#isTraversable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <openCycUri>http://sw.opencyc.org/concept/Mx4rvVj5V5wpEbGdrcN5Y29ycA</openCycUri>
     </owl:Class>
     
 
@@ -2975,6 +3022,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:NamedIndividual rdf:about="http://kb.openrobots.org#sitting">
         <rdf:type rdf:resource="http://kb.openrobots.org#Posture"/>
+        <owl:differentFrom rdf:resource="http://kb.openrobots.org#standing"/>
         <rdfs:label xml:lang="fr">assi</rdfs:label>
         <rdfs:label xml:lang="en">sitting</rdfs:label>
     </owl:NamedIndividual>
@@ -3116,13 +3164,6 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
             <rdf:Description rdf:about="http://kb.openrobots.org#sphereShape"/>
         </owl:distinctMembers>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://kb.openrobots.org#sitting"/>
-            <rdf:Description rdf:about="http://kb.openrobots.org#standing"/>
-        </owl:distinctMembers>
-    </rdf:Description>
     
 
 
@@ -3205,5 +3246,5 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
