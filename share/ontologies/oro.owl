@@ -40,6 +40,14 @@ It covers the &quot;common sense&quot; knowledge and rules, independantly of rob
     
 
 
+    <!-- http://kb.openrobots.org#cocoClass -->
+
+    <owl:AnnotationProperty rdf:about="http://kb.openrobots.org#cocoClass">
+        <rdfs:comment xml:lang="en">name of the corresponding class in the COCO dataset</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://kb.openrobots.org#interrogative -->
 
     <owl:AnnotationProperty rdf:about="http://kb.openrobots.org#interrogative"/>
@@ -1165,19 +1173,11 @@ This means that the object may not be currently in the field of view of the agen
     
 
 
-    <!-- http://dbpedia.org/ontology/Plant -->
-
-    <owl:Class rdf:about="http://dbpedia.org/ontology/Plant">
-        <owl:equivalentClass rdf:resource="http://sw.opencyc.org/concept/Plant"/>
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/PartiallyTangible"/>
-    </owl:Class>
-    
-
-
     <!-- http://dbpedia.org/resource/Chair -->
 
     <owl:Class rdf:about="http://dbpedia.org/resource/Chair">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+        <cocoClass>chair</cocoClass>
         <openCycUri>http://sw.opencyc.org/concept/Chair-PieceOfFurniture</openCycUri>
         <rdfs:label xml:lang="en">chair</rdfs:label>
         <rdfs:label xml:lang="fr">chaise</rdfs:label>
@@ -1247,42 +1247,6 @@ This means that the object may not be currently in the field of view of the agen
         <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="en">body part</rdfs:label>
         <rdfs:label xml:lang="fr">partie du corps</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kb.openrobots.org#Bottle -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Bottle">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Tableware"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasShape"/>
-                <owl:hasValue rdf:resource="http://kb.openrobots.org#cylinderShape"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</xsd:maxInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="de">Flasche</rdfs:label>
-        <rdfs:label xml:lang="en">bottle</rdfs:label>
-        <rdfs:label xml:lang="fr">bouteille</rdfs:label>
     </owl:Class>
     
 
@@ -1466,38 +1430,6 @@ The joint engagement between two (or more) agents is then expressed via the pred
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Manipulation"/>
         <rdfs:label xml:lang="fr">donner</rdfs:label>
         <rdfs:label xml:lang="en">give</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kb.openrobots.org#Glass -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Glass">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Tableware"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasShape"/>
-                <owl:hasValue rdf:resource="http://kb.openrobots.org#cylinderShape"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1750,7 +1682,7 @@ The joint engagement between two (or more) agents is then expressed via the pred
     <!-- http://kb.openrobots.org#Placemat -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Placemat">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Tableware"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://kb.openrobots.org#isHolder"/>
@@ -1819,20 +1751,6 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Manipulation"/>
         <rdfs:label xml:lang="fr">lâcher</rdfs:label>
         <rdfs:label xml:lang="en">release</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://kb.openrobots.org#Remote -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Remote">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasShape"/>
-                <owl:hasValue rdf:resource="http://kb.openrobots.org#boxShape"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1923,21 +1841,6 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
     
 
 
-    <!-- http://kb.openrobots.org#Tableware -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Tableware">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#isMovable"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://kb.openrobots.org#Task -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#Task">
@@ -1999,24 +1902,10 @@ Examples include the location of the center of mass of the Milky Way galaxy at t
     
 
 
-    <!-- http://kb.openrobots.org#Toy -->
-
-    <owl:Class rdf:about="http://kb.openrobots.org#Toy">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#GameArtifact"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://kb.openrobots.org#isMovable"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://kb.openrobots.org#ToyCube -->
 
     <owl:Class rdf:about="http://kb.openrobots.org#ToyCube">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Toy"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Toy"/>
         <rdfs:comment>A cube, traditionnaly made of wood, meant for children to play with.</rdfs:comment>
     </owl:Class>
     
@@ -2399,16 +2288,6 @@ The object of an action is asserted through the properties objectOfAction and re
     
 
 
-    <!-- http://sw.opencyc.org/concept/Plant -->
-
-    <owl:Class rdf:about="http://sw.opencyc.org/concept/Plant">
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/PartiallyTangible"/>
-        <rdfs:label xml:lang="en">plant</rdfs:label>
-        <rdfs:label xml:lang="fr">plante</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://sw.opencyc.org/concept/PurposefulAction -->
 
     <owl:Class rdf:about="http://sw.opencyc.org/concept/PurposefulAction">
@@ -2440,18 +2319,6 @@ The object of an action is asserted through the properties objectOfAction and re
         <rdfs:comment>Each instance of Situation is a state or event consisting of one or more objects having certain properties or bearing certain relations to each other. Notable specializations of Situation are Event and StaticSituation; it is disjoint with SomethingExisting.</rdfs:comment>
         <rdfs:label xml:lang="en">situation</rdfs:label>
         <rdfs:label xml:lang="fr">situation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://sw.opencyc.org/concept/Sofa-PieceOfFurniture -->
-
-    <owl:Class rdf:about="http://sw.opencyc.org/concept/Sofa-PieceOfFurniture">
-        <owl:equivalentClass rdf:resource="https://dbpedia.org/resource/Couch"/>
-        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
-        <rdfs:label xml:lang="fr">canapé</rdfs:label>
-        <rdfs:label xml:lang="en">couch</rdfs:label>
-        <rdfs:label xml:lang="en">sofa</rdfs:label>
     </owl:Class>
     
 
@@ -2554,8 +2421,6 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">table</rdfs:label>
-        <rdfs:label xml:lang="fr">table</rdfs:label>
     </owl:Class>
     
 
@@ -2624,6 +2489,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#EmbodiedAgent"/>
+        <cocoClass>person</cocoClass>
     </owl:Class>
     
 
@@ -2638,10 +2504,33 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Ball -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Ball">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <cocoClass>sports ball</cocoClass>
+        <rdfs:label xml:lang="en">ball</rdfs:label>
+        <rdfs:label xml:lang="fr">balle</rdfs:label>
+        <rdfs:label xml:lang="fr">ballon</rdfs:label>
+        <rdfs:label xml:lang="es">pelota</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Banana -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Banana">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Fruit"/>
+        <cocoClass>banana</cocoClass>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Bed -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Bed">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+        <cocoClass>bed</cocoClass>
         <rdfs:label xml:lang="de">Bett</rdfs:label>
         <rdfs:label xml:lang="en">bed</rdfs:label>
         <rdfs:label xml:lang="es">cama</rdfs:label>
@@ -2697,7 +2586,105 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <cocoClass>book</cocoClass>
         <openCycUri>http://sw.opencyc.org/concept/Mx4rwJaXepwpEbGdrcN5Y29ycA</openCycUri>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Bottle -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Bottle">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasShape"/>
+                <owl:hasValue rdf:resource="http://kb.openrobots.org#cylinderShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <cocoClass>bottle</cocoClass>
+        <rdfs:label xml:lang="de">Flasche</rdfs:label>
+        <rdfs:label xml:lang="en">bottle</rdfs:label>
+        <rdfs:label xml:lang="fr">bouteille</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Bowl -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Bowl">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Cabinetry -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Cabinetry">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
+        <rdfs:label xml:lang="en">cabinet</rdfs:label>
+        <rdfs:label xml:lang="fr">cabinet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Carpet -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Carpet">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/PartiallyTangible"/>
+        <rdfs:label xml:lang="en">carpet</rdfs:label>
+        <rdfs:label xml:lang="en">rug</rdfs:label>
+        <rdfs:label xml:lang="fr">tapis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Chandelier -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Chandelier">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:label xml:lang="en">chandelier</rdfs:label>
+        <rdfs:label xml:lang="fr">chandelier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Clock -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Clock">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <cocoClass>clock</cocoClass>
+        <rdfs:label xml:lang="en">clock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Closed-circuit_television_camera -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Closed-circuit_television_camera">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:label xml:lang="en">CCTV</rdfs:label>
+        <rdfs:label xml:lang="en">security camera</rdfs:label>
     </owl:Class>
     
 
@@ -2710,10 +2697,48 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Computer_keyboard -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Computer_keyboard">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <cocoClass>keyboard</cocoClass>
+        <rdfs:label xml:lang="en">keyboard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Computer_mouse -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Computer_mouse">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:label xml:lang="en">mouse</rdfs:label>
+        <rdfs:label xml:lang="fr">souris</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Couch -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Couch">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+        <cocoClass>couch</cocoClass>
+        <openCycUri>http://sw.opencyc.org/concept/Sofa-PieceOfFurniture</openCycUri>
+        <rdfs:label xml:lang="fr">canapé</rdfs:label>
+        <rdfs:label xml:lang="en">couch</rdfs:label>
+        <rdfs:label xml:lang="en">sofa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Countertop -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Countertop">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
+        <rdfs:label xml:lang="en">counter top</rdfs:label>
+        <rdfs:label xml:lang="en">countertop</rdfs:label>
+        <rdfs:label xml:lang="en-au">kitchen bench</rdfs:label>
+        <rdfs:label xml:lang="fr">plam de travail</rdfs:label>
+        <rdfs:label xml:lang="en-gb">worktop</rdfs:label>
     </owl:Class>
     
 
@@ -2721,7 +2746,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <!-- https://dbpedia.org/resource/Cup -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Cup">
-        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Tableware"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Glass_(drinkware)"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
@@ -2740,6 +2765,25 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <cocoClass>cup</cocoClass>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Curtain -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Curtain">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Desk -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Desk">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
+        <rdfs:label xml:lang="fr">bureau</rdfs:label>
+        <rdfs:label xml:lang="en">desk</rdfs:label>
     </owl:Class>
     
 
@@ -2758,10 +2802,47 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Fork -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Fork">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
+        <cocoClass>fork</cocoClass>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Fruit -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Fruit">
-        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Plant"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Kitchen_utensil -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Kitchen_utensil">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:label xml:lang="en">kitchen utensil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Knife -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Knife">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Kitchen_utensil"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
+        <cocoClass>knife</cocoClass>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Laptop -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Laptop">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <cocoClass>laptop</cocoClass>
     </owl:Class>
     
 
@@ -2769,7 +2850,8 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <!-- https://dbpedia.org/resource/Ornamental_plant -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Ornamental_plant">
-        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Plant"/>
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Plant"/>
+        <cocoClass>potted plant</cocoClass>
     </owl:Class>
     
 
@@ -2792,10 +2874,153 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     
 
 
+    <!-- https://dbpedia.org/resource/Plant -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Plant">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/PartiallyTangible"/>
+        <rdfs:label xml:lang="en">plant</rdfs:label>
+        <rdfs:label xml:lang="fr">plante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Refrigerator -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Refrigerator">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <cocoClass>refregirator</cocoClass>
+        <rdfs:label xml:lang="en">fridge</rdfs:label>
+        <rdfs:label xml:lang="fr">frigidaire</rdfs:label>
+        <rdfs:label xml:lang="es">nevera</rdfs:label>
+        <rdfs:label xml:lang="en">refrigerator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Remote_control -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Remote_control">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasShape"/>
+                <owl:hasValue rdf:resource="http://kb.openrobots.org#boxShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <cocoClass>remote</cocoClass>
+        <rdfs:label xml:lang="en">remote</rdfs:label>
+        <rdfs:label xml:lang="fr">télécommande</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Shoe_rack -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Shoe_rack">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <rdfs:label xml:lang="en">shoe rack</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://dbpedia.org/resource/Smartphone -->
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Smartphone">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/CellularTelephone"/>
+        <cocoClass>cell phone</cocoClass>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Spoon -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Spoon">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
+        <cocoClass>spoon</cocoClass>
+        <rdfs:label xml:lang="en">spoon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Sports_equipment -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Sports_equipment">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Tableware -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Tableware">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#isMovable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">tableware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Teddy_bear -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Teddy_bear">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Toy"/>
+        <rdfs:label xml:lang="en">teddy</rdfs:label>
+        <rdfs:label xml:lang="en">teddy bear</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Television -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Television">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <cocoClass>tv</cocoClass>
+        <rdfs:label xml:lang="en">TV</rdfs:label>
+        <rdfs:label xml:lang="en">television</rdfs:label>
+        <rdfs:label xml:lang="fr">télévision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Toy -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Toy">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#GameArtifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#isMovable"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">toy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Vase -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Vase">
+        <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
+        <rdfs:label xml:lang="en">vase</rdfs:label>
+        <rdfs:label xml:lang="fr">vase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Wardrobe -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Wardrobe">
+        <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/FurniturePiece"/>
+        <rdfs:label xml:lang="fr">armoire</rdfs:label>
+        <rdfs:label xml:lang="en">wardrobe</rdfs:label>
     </owl:Class>
     
 
@@ -2822,6 +3047,55 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
             </owl:Restriction>
         </rdfs:subClassOf>
         <openCycUri>http://sw.opencyc.org/concept/Mx4rvVj5V5wpEbGdrcN5Y29ycA</openCycUri>
+        <rdfs:label xml:lang="fr">fenêtre</rdfs:label>
+        <rdfs:label xml:lang="es">ventana</rdfs:label>
+        <rdfs:label xml:lang="en">window</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Glass_(drinkware) -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Glass_(drinkware)">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasShape"/>
+                <owl:hasValue rdf:resource="http://kb.openrobots.org#cylinderShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kb.openrobots.org#hasCharacteristicDimension"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <cocoClass xml:lang="fr">verre</cocoClass>
+        <cocoClass>wine glass</cocoClass>
+        <rdfs:label xml:lang="en">glass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/resource/Orange_(fruit) -->
+
+    <owl:Class rdf:about="https://dbpedia.org/resource/Orange_(fruit)">
+        <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Fruit"/>
+        <cocoClass>banana</cocoClass>
+        <rdfs:label xml:lang="en">banana</rdfs:label>
+        <rdfs:label xml:lang="fr">banane</rdfs:label>
     </owl:Class>
     
 
@@ -2838,6 +3112,10 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Table_(furniture)">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
+        <cocoClass>dining table</cocoClass>
+        <rdfs:label xml:lang="es">mesa</rdfs:label>
+        <rdfs:label xml:lang="en">table</rdfs:label>
+        <rdfs:label xml:lang="fr">table</rdfs:label>
     </owl:Class>
     
 
@@ -3128,17 +3406,17 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://kb.openrobots.org#Bottle"/>
-            <rdf:Description rdf:about="http://kb.openrobots.org#Glass"/>
-            <rdf:Description rdf:about="https://dbpedia.org/resource/Cup"/>
+            <rdf:Description rdf:about="http://kb.openrobots.org#Situation"/>
+            <rdf:Description rdf:about="http://sw.opencyc.org/concept/Color"/>
+            <rdf:Description rdf:about="http://sw.opencyc.org/concept/SpatialThing"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://kb.openrobots.org#Situation"/>
-            <rdf:Description rdf:about="http://sw.opencyc.org/concept/Color"/>
-            <rdf:Description rdf:about="http://sw.opencyc.org/concept/SpatialThing"/>
+            <rdf:Description rdf:about="https://dbpedia.org/resource/Bottle"/>
+            <rdf:Description rdf:about="https://dbpedia.org/resource/Cup"/>
+            <rdf:Description rdf:about="https://dbpedia.org/resource/Glass_(drinkware)"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
