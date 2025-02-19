@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.6.1 (2025-02-19)
+------------------
 * minor: add labels to some classes
 * Contributors: Séverin Lemaignan
 
