@@ -2,6 +2,11 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* minor: add labels to some classes
+* Contributors: Séverin Lemaignan
+
 2.6.0 (2025-01-31)
 ------------------
 * Added a number of COCO/gazebo classes
