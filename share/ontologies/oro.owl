@@ -1689,6 +1689,7 @@ The joint engagement between two (or more) agents is then expressed via the pred
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">placemat</rdfs:label>
     </owl:Class>
     
 
@@ -2634,6 +2635,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <owl:Class rdf:about="https://dbpedia.org/resource/Bowl">
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
+        <rdfs:label xml:lang="en">bowl</rdfs:label>
     </owl:Class>
     
 
@@ -2766,6 +2768,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
             </owl:Restriction>
         </rdfs:subClassOf>
         <cocoClass>cup</cocoClass>
+        <rdfs:label xml:lang="en">cup</rdfs:label>
     </owl:Class>
     
 
@@ -2807,6 +2810,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <owl:Class rdf:about="https://dbpedia.org/resource/Fork">
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
         <cocoClass>fork</cocoClass>
+        <rdfs:label xml:lang="en">fork</rdfs:label>
     </owl:Class>
     
 
@@ -2834,6 +2838,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Kitchen_utensil"/>
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Tableware"/>
         <cocoClass>knife</cocoClass>
+        <rdfs:label xml:lang="en">knife</rdfs:label>
     </owl:Class>
     
 
@@ -3082,9 +3087,9 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <cocoClass xml:lang="fr">verre</cocoClass>
         <cocoClass>wine glass</cocoClass>
         <rdfs:label xml:lang="en">glass</rdfs:label>
+        <rdfs:label xml:lang="fr">verre</rdfs:label>
     </owl:Class>
     
 
