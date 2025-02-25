@@ -538,12 +538,9 @@ Example: John went &gt;home&lt;</rdfs:comment>
     <!-- http://kb.openrobots.org#isAt -->
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#isAt">
-        <owl:equivalentProperty rdf:resource="http://sw.opencyc.org/concept/objectFoundInLocation"/>
         <owl:inverseOf rdf:resource="http://kb.openrobots.org#placeOf"/>
         <rdfs:domain rdf:resource="http://kb.openrobots.org#Location"/>
         <rdfs:range rdf:resource="http://kb.openrobots.org#Location"/>
-        <rdfs:label xml:lang="en">am at</rdfs:label>
-        <rdfs:label xml:lang="en">are at</rdfs:label>
         <rdfs:label xml:lang="en">is at</rdfs:label>
     </owl:ObjectProperty>
     
@@ -915,16 +912,6 @@ For instance, in the sentence &quot;The robot gives the cup to the human&quot;, 
         <rdfs:domain rdf:resource="http://kb.openrobots.org#Location"/>
         <rdfs:comment xml:lang="en">Relates an agent to some object: a &quot;near&quot; object is closer than 1m from the agent.</rdfs:comment>
         <rdfs:label>is near of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://sw.opencyc.org/concept/objectFoundInLocation -->
-
-    <owl:ObjectProperty rdf:about="http://sw.opencyc.org/concept/objectFoundInLocation">
-        <openCycUri>http://sw.opencyc.org/concept/Mx4rvVjQ5JwpEbGdrcN5Y29ycA</openCycUri>
-        <rdfs:comment>Links a localizable thing to its location.</rdfs:comment>
-        <rdfs:label>is at</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2599,6 +2586,9 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
         </rdfs:subClassOf>
         <cocoClass>book</cocoClass>
         <openCycUri>http://sw.opencyc.org/concept/Mx4rwJaXepwpEbGdrcN5Y29ycA</openCycUri>
+        <rdfs:label xml:lang="en">book</rdfs:label>
+        <rdfs:label xml:lang="es">libro</rdfs:label>
+        <rdfs:label xml:lang="fr">livre</rdfs:label>
     </owl:Class>
     
 
@@ -2705,6 +2695,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Coffee_table">
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Table_(furniture)"/>
+        <rdfs:label xml:lang="en">coffee table</rdfs:label>
     </owl:Class>
     
 
@@ -2787,6 +2778,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Curtain">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
+        <rdfs:label xml:lang="en">curtain</rdfs:label>
     </owl:Class>
     
 
@@ -2811,6 +2803,9 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">door</rdfs:label>
+        <rdfs:label xml:lang="fr">porte</rdfs:label>
+        <rdfs:label xml:lang="es">puerta</rdfs:label>
     </owl:Class>
     
 
@@ -2867,6 +2862,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <owl:Class rdf:about="https://dbpedia.org/resource/Ornamental_plant">
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Plant"/>
         <cocoClass>potted plant</cocoClass>
+        <rdfs:label xml:lang="en">ornamental plant</rdfs:label>
     </owl:Class>
     
 
@@ -3119,6 +3115,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Shelf_(storage)">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Object-SupportingFurniture"/>
+        <rdfs:label xml:lang="en">shelf</rdfs:label>
     </owl:Class>
     
 
