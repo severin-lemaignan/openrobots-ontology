@@ -621,6 +621,7 @@ Values can be:
 
     <owl:ObjectProperty rdf:about="http://kb.openrobots.org#isOn">
         <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#isAt"/>
+        <owl:inverseOf rdf:resource="http://kb.openrobots.org#isUnder"/>
         <rdfs:label xml:lang="fr">est sur</rdfs:label>
         <rdfs:label xml:lang="en">is on</rdfs:label>
     </owl:ObjectProperty>
@@ -633,6 +634,15 @@ Values can be:
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://sw.opencyc.org/concept/Situation"/>
         <rdfs:range rdf:resource="http://sw.opencyc.org/concept/Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kb.openrobots.org#isUnder -->
+
+    <owl:ObjectProperty rdf:about="http://kb.openrobots.org#isUnder">
+        <rdfs:subPropertyOf rdf:resource="http://kb.openrobots.org#isAt"/>
+        <rdfs:label xml:lang="en">is under</rdfs:label>
     </owl:ObjectProperty>
     
 
