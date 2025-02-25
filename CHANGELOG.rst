@@ -2,6 +2,12 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add labels to a bunch of classes + remove cyc:isLocated
+* add property isUnder as inverse of isOn
+* Contributors: Séverin Lemaignan
+
 2.6.1 (2025-02-19)
 ------------------
 * minor: add labels to some classes
