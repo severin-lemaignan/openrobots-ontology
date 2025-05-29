@@ -2497,6 +2497,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
     <owl:Class rdf:about="https://dbpedia.org/resource/Apple">
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/Food"/>
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Fruit"/>
+        <cocoClass>apple</cocoClass>
         <rdfs:label xml:lang="en">apple</rdfs:label>
     </owl:Class>
     
@@ -2714,6 +2715,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Computer_mouse">
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
+        <cocoClass>mouse</cocoClass>
         <rdfs:label xml:lang="en">mouse</rdfs:label>
         <rdfs:label xml:lang="fr">souris</rdfs:label>
     </owl:Class>
@@ -2983,6 +2985,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Teddy_bear">
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Toy"/>
+        <cocoClass>teddy bear</cocoClass>
         <rdfs:label xml:lang="en">teddy</rdfs:label>
         <rdfs:label xml:lang="en">teddy bear</rdfs:label>
     </owl:Class>
@@ -3020,6 +3023,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Vase">
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
+        <cocoClass>vase</cocoClass>
         <rdfs:label xml:lang="en">vase</rdfs:label>
         <rdfs:label xml:lang="fr">vase</rdfs:label>
     </owl:Class>
