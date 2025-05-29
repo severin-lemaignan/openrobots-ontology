@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.7.1 (2025-05-29)
+------------------
 * fix coco label typo for refigerator
 * Contributors: Lorenzo Ferrini
 
