@@ -2,6 +2,11 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix coco label typo for refigerator
+* Contributors: Lorenzo Ferrini
+
 2.7.0 (2025-02-25)
 ------------------
 * add labels to a bunch of classes + remove cyc:isLocated
