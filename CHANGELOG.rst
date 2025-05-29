@@ -2,6 +2,11 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fixing wrong labels for Orange class
+* Contributors: Lorenzo Ferrini
+
 2.7.1 (2025-05-29)
 ------------------
 * fix coco label typo for refigerator
