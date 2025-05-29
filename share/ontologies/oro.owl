@@ -2901,7 +2901,7 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Artifact"/>
         <rdfs:subClassOf rdf:resource="http://kb.openrobots.org#Container"/>
         <rdfs:subClassOf rdf:resource="http://sw.opencyc.org/concept/SolidTangibleThing"/>
-        <cocoClass>refregirator</cocoClass>
+        <cocoClass>refrigerator</cocoClass>
         <rdfs:label xml:lang="en">fridge</rdfs:label>
         <rdfs:label xml:lang="fr">frigidaire</rdfs:label>
         <rdfs:label xml:lang="es">nevera</rdfs:label>
