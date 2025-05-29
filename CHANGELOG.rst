@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.7.3 (2025-05-29)
+------------------
 * adding missing cocoClass attributes
 * Contributors: Lorenzo Ferrini
 
