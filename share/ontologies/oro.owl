@@ -3104,9 +3104,9 @@ Note that a fictional or imaginary object (such as Frodo, Captain Queeg, or HAL9
 
     <owl:Class rdf:about="https://dbpedia.org/resource/Orange_(fruit)">
         <rdfs:subClassOf rdf:resource="https://dbpedia.org/resource/Fruit"/>
-        <cocoClass>banana</cocoClass>
-        <rdfs:label xml:lang="en">banana</rdfs:label>
-        <rdfs:label xml:lang="fr">banane</rdfs:label>
+        <cocoClass>orange</cocoClass>
+        <rdfs:label xml:lang="en">orange</rdfs:label>
+        <rdfs:label xml:lang="fr">orange</rdfs:label>
     </owl:Class>
     
 
