@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.7.2 (2025-05-29)
+------------------
 * fixing wrong labels for Orange class
 * Contributors: Lorenzo Ferrini
 
