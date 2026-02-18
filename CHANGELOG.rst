@@ -2,8 +2,8 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.7.4 (2026-02-18)
+------------------
 * mark the package as architecture independent
 * Contributors: Séverin Lemaignan
 
