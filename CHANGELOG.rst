@@ -2,6 +2,11 @@
 Changelog for package oro
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* mark the package as architecture independent
+* Contributors: Séverin Lemaignan
+
 2.7.3 (2025-05-29)
 ------------------
 * adding missing cocoClass attributes
