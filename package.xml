@@ -13,6 +13,7 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <export>
+      <architecture_independent />
       <build_type>ament_cmake</build_type>
    </export>
 </package>
